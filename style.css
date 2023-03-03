@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* GENERELLE VARIABLER */
+
+section {
+  margin-bottom: 3rem;
+}
+
+/* Farver */
+html {
+  --green: #c8fd18;
+}
+
+/* Fonte */
+h1 {
+  font-family: arial black;
+  font-size: 3.6rem;
+  margin-block: 10rem;
+}
+h2 {
+  font-family: "aktiv-grotesk-arabic", sans-serif;
+  font-size: 2rem;
+}
+h3 {
+  font-family: "aktiv-grotesk-arabic", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+p,
+a {
+  font-family: "aktiv-grotesk-arabic", sans-serif;
+}
+
+#numb {
+  font-size: 6rem;
+}
+
+#link {
+  color: black;
+  text-decoration: underline;
+}
+
+/* Gap */
+
+body {
+  margin: 15px 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+.home a {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 25px;
+}
+.btn_menu {
+  background-color: black;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+.btn_menu:hover {
+  cursor: pointer;
+}
+
+ul,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+#landingpage {
+  text-align: center;
+}
+#projects_landingpage div {
+  text-align: center;
+  cursor: pointer;
+}
+#all_projects {
+  background-color: var(--green);
+  margin-inline: 6rem;
+}
+
+#text_box {
+  margin: 3rem 1rem;
+}
+.citat {
+  font-size: 2rem;
+  font-weight: medium;
+  line-height: 40px;
+}
+
+/* ABOUT */
+
+.A {
+  font-size: 8rem;
+  line-height: 2rem;
+}
+/* #about_landingpage h2 {
+  margin-bottom: -6rem;
+} */
+#about_article {
+  background-color: var(--green);
+}
