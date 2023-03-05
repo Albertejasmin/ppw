@@ -3,10 +3,13 @@
   margin: 0;
 }
 
-/* GENERELLE VARIABLER */
+img {
+  max-width: 100%;
+}
+/* GENERELT */
 
 section {
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 
 /* Farver */
@@ -15,14 +18,21 @@ html {
 }
 
 /* Fonte */
+@font-face {
+  font-family: myFont;
+  src: url(Ayuthaya.ttf);
+}
+
 h1 {
   font-family: arial black;
-  font-size: 3.6rem;
+  font-size: 14vw;
   margin-block: 10rem;
 }
+
 h2 {
   font-family: "aktiv-grotesk-arabic", sans-serif;
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-size: clamp(2rem, 0.7864rem + 5.178vw, 7rem);
 }
 h3 {
   font-family: "aktiv-grotesk-arabic", sans-serif;
@@ -43,11 +53,17 @@ a {
   color: black;
   text-decoration: underline;
 }
+#link_green {
+  background-color: var(--green);
+  padding-inline: 10px;
+  text-decoration: underline;
+  color: black;
+}
 
 /* Gap */
 
 body {
-  margin: 15px 20px;
+  margin: 20px 25px;
 }
 
 header {
@@ -78,22 +94,18 @@ a {
 #landingpage {
   text-align: center;
 }
-#projects_landingpage div {
+#project_grid div {
   text-align: center;
   cursor: pointer;
 }
-#all_projects {
-  background-color: var(--green);
-  margin-inline: 6rem;
-}
 
 #text_box {
-  margin: 3rem 1rem;
+  margin: auto;
+  width: 85%;
 }
 .citat {
-  font-size: 2rem;
-  font-weight: medium;
-  line-height: 40px;
+  line-height: 115%;
+  font-size: clamp(2rem, 0.7864rem + 5.178vw, 7rem);
 }
 
 /* ABOUT */
@@ -107,4 +119,52 @@ a {
 } */
 #about_article {
   background-color: var(--green);
+}
+
+/* PROJECTS */
+
+#project_box {
+  border: solid 2px black;
+}
+#project_text {
+  padding: 20px;
+}
+#fonten {
+  font-family: monospace;
+}
+
+/* DESKTOP */
+
+@media (min-width: 600px) {
+  #project_box {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  img {
+    order: 1;
+  }
+  #all_projects {
+    display: none;
+  }
+
+  #project_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #project_grid div {
+    margin-block: 11rem;
+  }
+
+  #project_flex {
+    display: flex;
+    justify-content: space-between;
+    place-items: baseline;
+  }
+
+  #about_landingpage {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
 }
