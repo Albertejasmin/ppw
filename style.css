@@ -7,6 +7,9 @@ img {
   max-width: 100%;
 }
 /* GENERELT */
+body {
+  margin: 20px 25px;
+}
 
 section {
   margin-bottom: 6rem;
@@ -44,6 +47,9 @@ p,
 a {
   font-family: "aktiv-grotesk-arabic", sans-serif;
 }
+.bold {
+  font-weight: bold;
+}
 
 #numb {
   font-size: 6rem;
@@ -62,10 +68,6 @@ a {
 
 /* Gap */
 
-body {
-  margin: 20px 25px;
-}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -74,6 +76,21 @@ header {
   color: black;
   font-size: 1.5rem;
   line-height: 25px;
+}
+
+/* BURGERMENU */
+
+.main-menu ul {
+  display: none; /* Fjern menu-listen som standard */
+}
+.main-menu.shown ul {
+  /* Vis menu-listen, når klassen ".shown" er til stede */
+  border-top: 1px solid #000;
+  padding-top: 1rem;
+  display: flex;
+  flex: 1 1 100%;
+  flex-flow: column;
+  text-align: end;
 }
 .btn_menu {
   background-color: black;
@@ -119,6 +136,7 @@ a {
 } */
 #about_article {
   background-color: var(--green);
+  padding: 10px 20px;
 }
 
 /* PROJECTS */
