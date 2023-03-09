@@ -47,12 +47,26 @@ p,
 a {
   font-family: "aktiv-grotesk-arabic", sans-serif;
 }
+
+article {
+  margin-bottom: 7rem;
+}
+
+/* FOOTER */
+footer {
+  border-top: solid 1px;
+}
+footer article {
+  margin-block: 1rem 3rem;
+}
+
 .bold {
   font-weight: bold;
 }
 
 #numb {
   font-size: 6rem;
+  color: black;
 }
 
 #link {
@@ -138,29 +152,55 @@ a {
   background-color: var(--green);
   padding: 10px 20px;
 }
+.citat_about {
+  line-height: 115%;
+  font-size: clamp(2rem, 0.7864rem + 5.178vw, 7rem);
+}
+
+.cv_grid {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 30px;
+  max-width: 60ch;
+  margin: var(--space-m);
+}
+.uddannelse {
+  grid-column: 2;
+}
 
 /* PROJECTS */
 
-#project_box {
-  border: solid 2px black;
-}
-#project_text {
+/* #project_box {
+  display: flex;
+  max-width: 500px;
+} */
+#project_text_container {
   padding: 20px;
+  background-color: var(--green);
 }
+
 #fonten {
   font-family: monospace;
+}
+.project_subtitle {
+  font-size: 0.9rem;
+  text-align: center;
+  color: white;
+}
+.project_text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 45px;
+  text-align: center;
+  color: white;
 }
 
 /* DESKTOP */
 
 @media (min-width: 600px) {
-  #project_box {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
-
   img {
     order: 1;
+    display: flex;
   }
   #all_projects {
     display: none;
@@ -184,5 +224,41 @@ a {
   #about_landingpage {
     display: grid;
     grid-template-columns: 1fr 2fr;
+  }
+
+  #text_box_about {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 10px;
+  }
+  footer article {
+    margin-block: 0;
+  }
+  footer article h3 {
+    margin-block: 1rem 4rem;
+  }
+  #build_with {
+    text-align: center;
+  }
+  #contact {
+    text-align: right;
+  }
+}
+
+@media (min-width: 900px) {
+  #project_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .cv_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
   }
 }
